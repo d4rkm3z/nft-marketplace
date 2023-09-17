@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import images from '../../public/assets';
 import { Button } from '@/components/button';
+import dynamic from 'next/dynamic';
 
 const FooterLinks = ({
   heading,
@@ -46,6 +47,7 @@ const Footer = () => {
               CryptoKet
             </p>
           </div>
+
           <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base mt-6">
             Get the latest updates
           </p>
@@ -111,4 +113,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default dynamic(() => Promise.resolve(Footer), { ssr: false });

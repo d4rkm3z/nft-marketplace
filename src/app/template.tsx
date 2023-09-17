@@ -7,7 +7,7 @@ import Footer from '@/components/footer';
 const Template = ({ children }: { children: ReactNode }) => (
   <div className="dark:bg-nft-dark bg-white min-h-screen">
     <Navbar />
-    <div>{children}</div>
+    <div className="pt-65">{children}</div>
     <Footer />
   </div>
 );

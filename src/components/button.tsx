@@ -1,10 +1,12 @@
+import { FC } from 'react';
+
 type Props = {
   title: string;
   handleClick: () => void;
   className?: string;
 };
 
-export const Button = ({ title, handleClick, className }: Props) => (
+export const Button: FC<Props> = ({ title, handleClick, className }) => (
   <button
     type="button"
     onClick={handleClick}
