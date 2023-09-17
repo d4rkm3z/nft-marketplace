@@ -1,8 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import Providers from '@/app/providers';
+import { config } from '@fortawesome/fontawesome-svg-core';
 
-const inter = Inter({ subsets: ['latin'] });
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body className={inter.className}>
-      {children}
+    <body>
+      <Providers>{children}</Providers>
     </body>
   </html>
 );
